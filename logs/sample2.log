@@ -1,0 +1,35 @@
+[2025-05-17 09:15:01] INFO: Starting system check. IP: 192.168.0.1
+[2025-05-17 09:15:22] WARNING: High CPU usage. Sensor: CPU, Value: 88%
+[2025-05-17 09:15:45] ERROR: Ping failed. IP: 192.168.0.1, Reason: Timeout
+
+[2025-05-17 09:16:10] INFO: Restarting service. Service: DNS
+[2025-05-17 09:16:33] ERROR: DNS service failed. Reason: Config missing
+[2025-05-17 09:16:50] INFO: DNS reconfigured. Status: OK
+
+[2025-05-17 09:17:07] INFO: Starting backup process
+[2025-05-17 09:17:19] WARNING: Disk almost full. Usage: 91%
+[2025-05-17 09:17:19] WARNING: Disk almost full. Usage: 91%
+[2025-05-17 09:17:29] ERROR: Backup failed. Reason: Disk full
+
+[2025-05-17 09:18:02] INFO: User login. User: admin
+[2025-05-17 09:18:15] INFO: Session started. IP: 192.168.0.5
+[2025-05-17 09:18:40] WARNING: Suspicious login detected. User: admin
+[2025-05-17 09:18:55] ERROR: Session terminated unexpectedly
+
+[2025-05-17 09:19:11] INFO: Scheduled task triggered
+[2025-05-17 09:19:23] INFO: Task completed. TaskID: 57
+[2025-05-17 09:19:45] WARNING: Low memory. Available: 5%
+[2025-05-17 09:19:59] ERROR: Task crash. TaskID: 57
+
+[2025-05-17 09:20:14] INFO: Syncing with remote server
+[2025-05-17 09:20:29] WARNING: Network delay. Latency: 320ms
+[2025-05-17 09:20:43] ERROR: Sync failed. Reason: Timeout
+
+[2025-05-17 09:21:05] INFO: Reconnecting to database
+[2025-05-17 09:21:18] INFO: Connection restored. DB: main
+[2025-05-17 09:21:32] WARNING: Slow query detected
+[2025-05-17 09:21:49] ERROR: Query timeout. QueryID: 998
+
+[2025-05-17 09:22:10] INFO: Monitoring active
+[2025-05-17 09:22:24] WARNING: High temperature. Sensor: GPU
+[2025-05-17 09:22:46] ERROR: GPU throttled. Reason: Overheat

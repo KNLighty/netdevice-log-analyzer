@@ -1,0 +1,10 @@
+[2025-05-17 09:15:23] INFO: Device startup completed. IP: 192.168.1.10
+[2025-05-17 09:16:05] WARNING: High temperature detected. Sensor: CPU, Value: 85°C
+[2025-05-17 09:16:45] ERROR: Device connection failed. IP: 192.168.1.10, Reason: Timeout
+[2025-05-17 09:17:30] INFO: Running diagnostic test. TestID: 12345
+[2025-05-17 09:18:00] ERROR: Voltage out of range. Sensor: PowerUnit, Value: 5.2V
+[2025-05-17 09:19:10] INFO: Device reboot initiated. IP: 192.168.1.10
+[2025-05-17 09:20:00] WARNING: Memory usage high. Usage: 92%
+[2025-05-17 09:20:45] INFO: Device connection restored. IP: 192.168.1.10
+[2025-05-17 09:21:30] ERROR: Firmware update failed. Version: 2.0.3, Reason: Checksum error
+[2025-05-16 09:21:30] ERROR: Firmware update failed. Version: 2.0.3, Reason: Checksum error
