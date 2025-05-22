@@ -21,9 +21,8 @@
 - argparse
 - re（正規表現）
 - collections
-- tabulate / rich（整形出力）
+- tabulate
 - matplotlib（グラフ）
-- pytest（テスト）
 
 ## 使用方法
 
