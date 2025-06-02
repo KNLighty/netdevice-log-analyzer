@@ -1,5 +1,0 @@
-datetime,level,message
-2025-05-16 09:21:30,ERROR,"Firmware update failed. Version: 2.0.3, Reason: Checksum error"
-2025-05-17 09:16:45,ERROR,"Device connection failed. IP: 192.168.1.10, Reason: Timeout"
-2025-05-17 09:18:00,ERROR,"Voltage out of range. Sensor: PowerUnit, Value: 5.2V"
-2025-05-17 09:21:30,ERROR,"Firmware update failed. Version: 2.0.3, Reason: Checksum error"

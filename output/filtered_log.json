@@ -1,22 +1,142 @@
 [
   {
-    "datetime": "2025-05-16 09:21:30",
-    "level": "ERROR",
-    "message": "Firmware update failed. Version: 2.0.3, Reason: Checksum error"
+    "datetime": "2025-05-17 09:15:01",
+    "level": "INFO",
+    "message": "Starting system check. IP: 192.168.0.1"
   },
   {
-    "datetime": "2025-05-17 09:16:45",
-    "level": "ERROR",
-    "message": "Device connection failed. IP: 192.168.1.10, Reason: Timeout"
+    "datetime": "2025-05-17 09:15:22",
+    "level": "WARNING",
+    "message": "High CPU usage. Sensor: CPU, Value: 88%"
   },
   {
-    "datetime": "2025-05-17 09:18:00",
+    "datetime": "2025-05-17 09:15:45",
     "level": "ERROR",
-    "message": "Voltage out of range. Sensor: PowerUnit, Value: 5.2V"
+    "message": "Ping failed. IP: 192.168.0.1, Reason: Timeout"
   },
   {
-    "datetime": "2025-05-17 09:21:30",
+    "datetime": "2025-05-17 09:16:10",
+    "level": "INFO",
+    "message": "Restarting service. Service: DNS"
+  },
+  {
+    "datetime": "2025-05-17 09:16:33",
     "level": "ERROR",
-    "message": "Firmware update failed. Version: 2.0.3, Reason: Checksum error"
+    "message": "DNS service failed. Reason: Config missing"
+  },
+  {
+    "datetime": "2025-05-17 09:16:50",
+    "level": "INFO",
+    "message": "DNS reconfigured. Status: OK"
+  },
+  {
+    "datetime": "2025-05-17 09:17:07",
+    "level": "INFO",
+    "message": "Starting backup process"
+  },
+  {
+    "datetime": "2025-05-17 09:17:19",
+    "level": "WARNING",
+    "message": "Disk almost full. Usage: 91%"
+  },
+  {
+    "datetime": "2025-05-17 09:17:19",
+    "level": "WARNING",
+    "message": "Disk almost full. Usage: 91%"
+  },
+  {
+    "datetime": "2025-05-17 09:17:29",
+    "level": "ERROR",
+    "message": "Backup failed. Reason: Disk full"
+  },
+  {
+    "datetime": "2025-05-17 09:18:02",
+    "level": "INFO",
+    "message": "User login. User: admin"
+  },
+  {
+    "datetime": "2025-05-17 09:18:15",
+    "level": "INFO",
+    "message": "Session started. IP: 192.168.0.5"
+  },
+  {
+    "datetime": "2025-05-17 09:18:40",
+    "level": "WARNING",
+    "message": "Suspicious login detected. User: admin"
+  },
+  {
+    "datetime": "2025-05-17 09:18:55",
+    "level": "ERROR",
+    "message": "Session terminated unexpectedly"
+  },
+  {
+    "datetime": "2025-05-17 09:19:11",
+    "level": "INFO",
+    "message": "Scheduled task triggered"
+  },
+  {
+    "datetime": "2025-05-17 09:19:23",
+    "level": "INFO",
+    "message": "Task completed. TaskID: 57"
+  },
+  {
+    "datetime": "2025-05-17 09:19:45",
+    "level": "WARNING",
+    "message": "Low memory. Available: 5%"
+  },
+  {
+    "datetime": "2025-05-17 09:19:59",
+    "level": "ERROR",
+    "message": "Task crash. TaskID: 57"
+  },
+  {
+    "datetime": "2025-05-17 09:20:14",
+    "level": "INFO",
+    "message": "Syncing with remote server"
+  },
+  {
+    "datetime": "2025-05-17 09:20:29",
+    "level": "WARNING",
+    "message": "Network delay. Latency: 320ms"
+  },
+  {
+    "datetime": "2025-05-17 09:20:43",
+    "level": "ERROR",
+    "message": "Sync failed. Reason: Timeout"
+  },
+  {
+    "datetime": "2025-05-17 09:21:05",
+    "level": "INFO",
+    "message": "Reconnecting to database"
+  },
+  {
+    "datetime": "2025-05-17 09:21:18",
+    "level": "INFO",
+    "message": "Connection restored. DB: main"
+  },
+  {
+    "datetime": "2025-05-17 09:21:32",
+    "level": "WARNING",
+    "message": "Slow query detected"
+  },
+  {
+    "datetime": "2025-05-17 09:21:49",
+    "level": "ERROR",
+    "message": "Query timeout. QueryID: 998"
+  },
+  {
+    "datetime": "2025-05-17 09:22:10",
+    "level": "INFO",
+    "message": "Monitoring active"
+  },
+  {
+    "datetime": "2025-05-17 09:22:24",
+    "level": "WARNING",
+    "message": "High temperature. Sensor: GPU"
+  },
+  {
+    "datetime": "2025-05-17 09:22:46",
+    "level": "ERROR",
+    "message": "GPU throttled. Reason: Overheat"
   }
 ]
