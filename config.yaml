@@ -1,0 +1,9 @@
+patterns:
+  timestamp: "\\[(?P<timestamp>.*?)\\]"
+  level: "\\] (?P<level>INFO|WARNING|ERROR):"
+  message: ": (?P<message>.*?)(?= IP:| Sensor:| Reason:| Value:| TestID:|$)"
+  ip: "IP: (?P<ip>[\\d\\.]+)"
+  sensor: "Sensor: (?P<sensor>\\w+)"
+  value: "Value: (?P<value>[\\d\\.]+[°%V]*)"
+  testid: "TestID: (?P<testid>\\d+)"
+  reason: "Reason: (?P<reason>.+)"

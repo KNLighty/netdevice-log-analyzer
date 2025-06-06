@@ -1,8 +1,33 @@
 import re
+import yaml
 
-log_pattern = re.compile(
-    r"\[(?P<datetime>.*?)\]\s+(?P<level>INFO|WARNING|ERROR):\s+(?P<message>.*)"
-)
+# YAMLから正規表現パターンを読み込む
+def load_config(config_path="config.yaml"):
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+            return data.get("patterns", {})
+    except Exception as e:
+        print(f"[エラー] config.yamlの読み込みに失敗しました: {e}")
+        return {}
+
+# 1行のログをパターンで解析
+def parse_log_line(line, patterns):
+    result = {}
+    for key, pattern in patterns.items():
+        match = re.search(pattern, line)
+        if match:
+            result[key] = match.group(key)
+
+    # 互換性のため timestamp → datetime にリネーム
+    if "timestamp" in result:
+        result["datetime"] = result.pop("timestamp")
+
+    if "datetime" in result and "level" in result:
+        return result
+    else:
+        print(f"[スキップ] パターンに一致しません: {line}")
+        return None
 
 # ログファイルを開く関数
 def open_log_file(file_path):
@@ -18,22 +43,12 @@ def open_log_file(file_path):
         return None
 
 # ログファイルを1行ずつ読み込む
-def read_lines(file):
-    logs = []  # ← ここに辞書を追加していく
+def read_lines(file, patterns):
+    logs = []
     for line in file:
         line = line.strip()
         if line:
-            parsed = parse_log_line(line)
+            parsed = parse_log_line(line, patterns)
             if parsed:
                 logs.append(parsed)
-    return logs  # 最終的に list[dict] を返す
-
-
-# 1行のログを正規表現で解析し、辞書形式で返す関数（マッチしない場合はNone）
-def parse_log_line(line):
-    match = log_pattern.match(line)
-    if match:
-        return match.groupdict()
-    else:
-        print(f"[スキップ] 正規表現に一致しません: {line}")
-        return None
+    return logs

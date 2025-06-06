@@ -6,7 +6,7 @@ import json
 import os
 import matplotlib.pyplot as plt
 from collections import Counter, defaultdict
-from parser import open_log_file, read_lines
+from parser import open_log_file, read_lines, load_config, parse_log_line
 
 # ログレベルでフィルタリングする関数
 def filter_by_level(logs, level):
@@ -123,14 +123,19 @@ def main():
     # グラフ
     parser.add_argument("--plot", action="store_true", help="イベント頻度をグラフで表示する")
 
+    # YAMLコンフィグのパス
+    parser.add_argument("--config", help="YAML形式のログフォーマット定義ファイル", default="config.yaml")
 
     args = parser.parse_args()
+
+    config = load_config(args.config)
+
 
     log_file = open_log_file(args.file)
     if not log_file:
         return
     
-    log_data = read_lines(log_file)
+    log_data = read_lines(log_file, config)
     log_file.close()
 
     if not log_data:
@@ -169,7 +174,5 @@ def main():
 
 
 if __name__ == "__main__":
-    try:
-        main()
-    except Exception as e:
-        print(f"[致命的エラー] 予期しない例外が発生しました: {e}")
+     main()
+
