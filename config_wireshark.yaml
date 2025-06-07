@@ -1,0 +1,6 @@
+patterns:
+  timestamp: "\\[(?P<timestamp>\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2})\\]"
+  level: "\\] (?P<level>TCP|UDP|ICMP):"
+  message: ": (?P<message>.*?)(?=\\. IP:|$)"
+  ip: "IP: (?P<ip>[\\d\\.]+)"
+  dst: "-> (?P<dst>[\\d\\.]+)"

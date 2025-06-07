@@ -22,6 +22,10 @@ def parse_log_line(line, patterns):
     # 互換性のため timestamp → datetime にリネーム
     if "timestamp" in result:
         result["datetime"] = result.pop("timestamp")
+    
+    # Wireshark向け: dst → destination に変換（任意）
+    if "dst" in result:
+        result["destination"] = result.pop("dst")
 
     if "datetime" in result and "level" in result:
         return result
